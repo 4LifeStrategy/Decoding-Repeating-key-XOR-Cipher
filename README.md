@@ -14,6 +14,7 @@ The **Repeating-key XOR Cipher Decoder** is a Python-based tool designed to deco
 ## Tools
 
 **Language**: Python 3.13.1
+
 **Libraries**:
   - binascii
 
