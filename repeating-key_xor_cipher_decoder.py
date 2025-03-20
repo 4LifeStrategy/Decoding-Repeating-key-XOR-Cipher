@@ -12,9 +12,13 @@ plaintext_header = b"ORDER:"
 # Extract the repeating XOR key from the known plaintext
 key = bytes([ciphertext[i] ^ plaintext_header[i] for i in range(len(plaintext_header))])
 
-# Decrypt the message using the repeating XOR key
-decrypted_message = bytes([ciphertext[i] ^ key[i % len(key)] for i in range(len(ciphertext))])
+# Function to decrypt with repeating-key XOR
+def xor_decrypt(ciphertext, key):
+    key_length = len(key)
+    return bytes([ciphertext[i] ^ key[i % key_length] for i in range(len(ciphertext))])
 
-# Convert to readable text
-decrypted_text = decrypted_message.decode(errors="ignore")
-decrypted_text
+# Decrypt the message using the extracted key
+decrypted_message = xor_decrypt(ciphertext, key)
+
+# Convert decrypted bytes to readable text
+print(decrypted_message.decode(errors='ignore'))
