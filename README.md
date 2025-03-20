@@ -10,3 +10,17 @@ The **Repeating-key XOR Cipher Decoder** is a Python-based tool designed to deco
 ## Project Scope
 
 **Objective**: Automate repeating-key XOR cipher decoding.
+
+## Tools
+
+**Language**: Python 3.13.1
+**Libraries**:
+  - binascii
+
+## Workflow
+
+1. Download **repeating-key_xor_cipher_decoder.py**
+2. Open terminal and head to the path of the downloaded file
+3. Run Command:<br />
+        
+        python3 repeating-key_xor_cipher_decoder.py
